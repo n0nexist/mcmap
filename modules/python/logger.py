@@ -24,7 +24,7 @@ def startlogging(host,arguments):
     global filename
     if not os.path.exists("outputs"):
         os.makedirs("outputs")
-    filename = f"outputs/scan_{host.replace("/","_")}_.log"
+    filename = f"outputs/scan_{host.replace('/','_')}_.log"
     with open(filename, 'a') as file:
         file.write(f"[ mcmap - scanning \"{host}\" with ports \"{arguments}\"]\n")
         file.close()
